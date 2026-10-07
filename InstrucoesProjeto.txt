@@ -1,0 +1,13 @@
+Realizar login;
+
+Cadastrar, atualizar ou remover usuarios (nome, idade, endereço, estado civil,genero, qual congregaçao pertence, telefone);
+
+Cadastrar, atualizar ou remover Missionários (nome, idade, endereço, estado civil, qual congregaçao pertence, telefone);
+
+Cadastrar, atualizar ou remover Congregações (nome, endereço, telefone);
+
+Registro de Oferta/dizimo de cada congregacao;
+
+Registro de Entrada e Saida de Dinheiro;
+
+

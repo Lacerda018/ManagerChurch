@@ -1,0 +1,27 @@
+docker compose exec mysql bash
+
+docker compose exec mysql mysql -u root -p
+
+mysql> show tables from laravel ;
+
+mysql> use laravel;
+
+mysql> select * from users;
+
+Hash - pega a palavra da senha e retorna uma unica string equivalente a senha (consolidar);
+
+Consolidar sobre bancos SQL e noSQL
+
+"exercicio = aplicar chave etangeira na congregation"
+
+Trait - recurso extra (consolidar)
+
+"exercicio = adicionar deleted_at nas tabelas, ver uma forma do laravel tratar isso automaticamente"
+
+procurar como criar uma factory no laravel, configurar a factory de acordo com os campos da model, adicionar no db seed
+
+como armazenar um registro na tabela de dados por uma rota usando laravel 
+
+GIT COMIT/PUSH/PULL (consolidar como criar um pr no github)
+
+para começar o projeto "pensar e tentar antes de pedir ajuda"
