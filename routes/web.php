@@ -13,9 +13,12 @@ Route::get('/', function () {
 
 Route::get('admin/usuarios', [UserController::class, 'index']);
 Route::get('admin/usuarios/{user}', [UserController::class, 'show']);
+Route::post('admin/usuarios', [UserController::class, 'store']);
 
 Route::get('admin/missionarios', [MissionaryController::class, 'index']);
 Route::get('admin/missionarios/{missionary}', [MissionaryController::class, 'show']);
+Route::post('admin/missionarios', [MissionaryController::class, 'store']);
 
 Route::get('admin/congregacoes', [CongregationController::class, 'index']);
 Route::get('admin/congregacoes/{congregation}', [CongregationController::class, 'show']);
+Route::post('admin/congregacoes', [CongregationController::class, 'store']);
