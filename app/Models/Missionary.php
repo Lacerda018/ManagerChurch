@@ -2,11 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+//se Illuminate\Database\Eloquent\Attributes\UseFactory;
 
+use App\Traits\Auditavel;
+use App\Traits\FormataTelefone;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+
+
+class Missionaries extends Model
+{
+    use SoftDeletes;
+}
 class Missionary extends Model
 {
     //
+    use HasFactory, FormataTelefone, Auditavel;
     protected $fillable = [
         'name',
         'email',
@@ -16,5 +29,7 @@ class Missionary extends Model
         'gender',
         'civil_status',
         'congregation',
+        'password',
     ];
 }
+

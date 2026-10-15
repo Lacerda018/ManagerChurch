@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Missionary;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        //User::factory(10)->create();
         //$user = new User();
         //dd($user->soma(1, 2));
         /*User::factory()->create([
@@ -23,6 +24,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);*/
 
+        /*$this->call([
+           MissionarySeeder::class,
+        ]);*/
 
+        Missionary::factory(10)->create();
     }
 }
