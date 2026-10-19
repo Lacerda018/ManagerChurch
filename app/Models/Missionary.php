@@ -8,6 +8,7 @@ use App\Traits\Auditavel;
 use App\Traits\FormataTelefone;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
@@ -28,8 +29,13 @@ class Missionary extends Model
         'phone_number',
         'gender',
         'civil_status',
-        'congregation',
+        'congregation_id',
         'password',
     ];
+
+    public function congregation(): BelongsTo
+    {
+        return $this->belongsTo(Congregation::class);
+    }
 }
 

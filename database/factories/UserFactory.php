@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Congregation;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -33,7 +34,7 @@ class UserFactory extends Factory
             'phone_number' => fake()->phoneNumber(), 
             'civil_status' => fake()->randomElement(['single', 'married', 'divorced', 'widowed']),
             'gender' => fake()->randomElement(['male', 'female']),
-            'congregation' => fake()->randomElement(['Congregation A', 'Congregation B', 'Congregation C']),
+            'congregation_id' => Congregation::factory(),
         ];
     }
 

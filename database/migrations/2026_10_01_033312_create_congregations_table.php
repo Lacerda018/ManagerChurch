@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->timestamps();
             $table->foreignId('criado_por')->nullable()->constrained('users')->nullOnDelete();
+            
         });
     }
 

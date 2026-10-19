@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Congregation;
 use App\Models\Missionary;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,18 +17,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //User::factory(10)->create();
-        //$user = new User();
-        //dd($user->soma(1, 2));
-        /*User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);*/
-
-        /*$this->call([
-           MissionarySeeder::class,
-        ]);*/
-
-        Missionary::factory(10)->create();
+        User::factory(10)->create();
+        
+        Congregation::factory()->count(5)->create();
+        
+        Missionary::factory(10)->create([
+            'congregation_id' => fn () => Congregation::inRandomOrder()->value('id'),
+        ]);
     }
 }
