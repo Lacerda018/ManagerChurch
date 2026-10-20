@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Traits\Auditavel;
 use App\Traits\FormataTelefone;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
@@ -44,6 +45,12 @@ class User extends Authenticatable
         ];
     }
 
+    protected function email(): Attribute
+    {
+        return Attribute::make(
+            set: fn (string $value) => strtolower(trim($value))
+        );
+    } 
     
 }
 

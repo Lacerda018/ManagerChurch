@@ -4,11 +4,15 @@ use App\Http\Controllers\CongregationController;
 use App\Http\Controllers\MissionaryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController as ControllersUserController;
+use App\Models\Congregation;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
+    /*$congregation = Congregation::find(1);
+    dd($congregation);*/
 });
 
 Route::get('admin/usuarios', [UserController::class, 'index']);
